@@ -1,5 +1,6 @@
 "use client"
 
+import WorkflowShowcase from "@/components/ui/WorkflowShowcase";
 import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -64,9 +65,27 @@ export default function Portfolio() {
 
       {/* Projects Section */}
       <ProjectsSection />
+<section className="max-w-7xl mx-auto px-6 lg:px-8 mt-24 mb-12">
+  <div className="max-w-3xl">
+    
+    <p className="text-emerald-400 uppercase tracking-[0.2em] text-sm font-medium">
+      System Architecture
+    </p>
 
-      {/* AI Video Section */}
-      <AIVideoSection />
+    <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 leading-tight">
+      Interactive Workflow Replica
+    </h2>
+
+    <p className="text-gray-400 text-base md:text-lg mt-6 leading-relaxed">
+      A portfolio-safe visualization of a production-inspired AI automation
+      workflow built with n8n, showcasing orchestration logic, integrations,
+      and scalable system design.
+    </p>
+
+  </div>
+</section>
+      {/* Workflow Showcase */}
+      <WorkflowShowcase />
 
       {/* Education & Experience */}
       <EducationExperienceSection />
