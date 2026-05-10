@@ -25,6 +25,7 @@ const nodes = workflow.nodes.map((node: any) => ({
     border: "1px solid #374151",
     padding: 10,
     borderRadius: 12,
+    fontSize: 12,
   },
 }));
 
@@ -49,6 +50,9 @@ Object.entries(workflow.connections).forEach(
             target: targetNode.id,
             animated: true,
             type: "smoothstep",
+            style: {
+              stroke: "#64748b",
+            },
           });
         }
       });
@@ -57,27 +61,50 @@ Object.entries(workflow.connections).forEach(
 );
 
 export default function WorkflowShowcase() {
- return (
-  <div className="w-full h-[900px]">
-    <ReactFlow
-      nodes={nodes}
-      edges={edges}
-      fitView
-      fitViewOptions={{
-        padding: 0.5,
-        minZoom: 0.2,
-        maxZoom: 1,
-      }}
-      defaultViewport={{
-        x: 0,
-        y: 0,
-        zoom: 0.35,
-      }}
-    >
-      <MiniMap />
-      <Controls />
-      <Background />
-    </ReactFlow>
-  </div>
-);
+  return (
+    <div className="w-full h-[900px] rounded-xl overflow-hidden border border-zinc-800">
+      <ReactFlow
+        nodes={nodes}
+        edges={edges}
+
+        // Better initial fit
+        fitView
+        fitViewOptions={{
+          padding: 0.3,
+        }}
+
+        // Better zoom behaviour
+        minZoom={0.08}
+        maxZoom={1.5}
+        defaultViewport={{
+          x: 0,
+          y: 0,
+          zoom: 0.35,
+        }}
+
+        proOptions={{ hideAttribution: true }}
+      >
+        {/* Better MiniMap */}
+        <MiniMap
+          pannable
+          zoomable
+          nodeColor="#3b82f6"
+          maskColor="rgba(0,0,0,0.65)"
+          style={{
+            backgroundColor: "#0f172a",
+            border: "1px solid #27272a",
+            borderRadius: 12,
+          }}
+        />
+
+        <Controls />
+
+        <Background
+          gap={20}
+          size={1}
+          color="#1f2937"
+        />
+      </ReactFlow>
+    </div>
+  );
 }
