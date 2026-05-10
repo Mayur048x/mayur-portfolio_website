@@ -62,7 +62,7 @@ Object.entries(workflow.connections).forEach(
 
 export default function WorkflowShowcase() {
   return (
-    <div className="w-full h-[900px] rounded-xl overflow-hidden border border-zinc-800">
+    <div className="w-full h-[70vh] md:h-[85vh] rounded-xl overflow-hidden border border-zinc-800">
       <ReactFlow
         nodes={nodes}
         edges={edges}
