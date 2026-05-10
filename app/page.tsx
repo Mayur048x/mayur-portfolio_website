@@ -131,9 +131,6 @@ function Navigation({
             <Link href="#projects" className="nav-link hover:text-white transition-colors">
               Projects
             </Link>
-            <Link href="#ai-video" className="nav-link hover:text-white transition-colors">
-              AI Video
-            </Link>
             <Link href="#contact" className="nav-link hover:text-white transition-colors">
               Contact
             </Link>
@@ -179,13 +176,6 @@ function Navigation({
             </Link>
             <Link
               href="#ai-video"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block text-gray-400 hover:text-white transition-colors"
-            >
-              AI Video
-            </Link>
-            <Link
-              href="#contact"
               onClick={() => setMobileMenuOpen(false)}
               className="block text-gray-400 hover:text-white transition-colors"
             >
