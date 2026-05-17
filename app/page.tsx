@@ -367,6 +367,8 @@ function RevealWrapper({ children, className = "" }: { children: React.ReactNode
 }
 
 function AboutSection() {
+  const btnClass = "inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:border-white/30 hover:bg-white/10 hover:scale-105 w-fit"
+
   return (
     <section id="about" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-6">
@@ -381,6 +383,34 @@ function AboutSection() {
                 chaos into clarity
               </span>
             </h2>
+            
+            <a
+              href="https://resume-of-mayur-ramchandani.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={btnClass}
+            >
+              <span className="bg-gradient-to-r from-[#00f5a0] via-[#00d9f9] to-[#a855f7] bg-clip-text text-transparent">
+                Download Resume
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="text-emerald-400"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+            </a>
+
           </RevealWrapper>
 
           <RevealWrapper className="space-y-6 text-gray-400 leading-relaxed">
@@ -388,20 +418,23 @@ function AboutSection() {
               I build AI-powered operational systems that turn chaotic team workflows into structured, automated execution.
             </p>
             <p>
-              Over the past year, I’ve been focused on {" "}
-              <span className="text-white font-medium">designing real-world automation infrastructure using AI</span>
-               ,workflow orchestration, backend systems, and conversational interfaces.
-                My work combines product thinking with execution building systems that can assign tasks, manage dependencies, 
-                automate approvals, handle submissions, and coordinate teams through natural language interactions.
+              Over the past year, I&apos;ve been focused on{" "}
+              <span className="text-white font-medium">
+                designing real-world automation infrastructure using AI
+              </span>
+              , workflow orchestration, backend systems, and conversational interfaces. My work combines product thinking
+              with execution building systems that can assign tasks, manage dependencies, automate approvals, handle
+              submissions, and coordinate teams through natural language interactions.
             </p>
             <p>
               Recently, I designed a{" "}
-              <span className="text-white font-medium">WhatsApp-based execution system</span> that converts
-              documents, and messages into structured tasks with tracking and manager visibility.
+              <span className="text-white font-medium">WhatsApp-based execution system</span>{" "}
+              that converts documents and messages into structured tasks with tracking and manager visibility.
               This project taught me the power of building systems that live where people already work.
             </p>
             <p>
-              I enjoy solving operational problems, designing scalable systems, and turning complex processes into seamless user experiences.
+              I enjoy solving operational problems, designing scalable systems, and turning complex processes into
+              seamless user experiences.
             </p>
           </RevealWrapper>
         </div>
